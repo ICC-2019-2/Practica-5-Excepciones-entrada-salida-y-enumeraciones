@@ -129,18 +129,11 @@ public class Estudiante implements Registro {
         if (!(objeto instanceof Estudiante))
             return false;
         Estudiante estudiante = (Estudiante)objeto;
-        if (estudiante == null)
-           return false;
-        if (!this.nombre.equals(estudiante.nombre))
-           return false;
-        if (this.cuenta != (estudiante.cuenta))
-           return false;
-        if (this.promedio != (estudiante.promedio))
-           return false;
-        if (this.edad != (estudiante.edad))
-           return false;
-
-        return true;
+        return (estudiante == null) 
+        ||(!this.nombre.equals(estudiante.nombre))
+        ||(this.cuenta != (estudiante.cuenta))
+        ||(this.promedio != (estudiante.promedio))
+        ||(this.edad != (estudiante.edad)) ? false : true;
     }
 
     /**
